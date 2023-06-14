@@ -314,6 +314,7 @@ GameObject:
   - component: {fileID: 2020441168}
   - component: {fileID: 2020441167}
   - component: {fileID: 2020441171}
+  - component: {fileID: 2020441172}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -353,8 +354,7 @@ MeshRenderer:
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_Materials: []
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -419,3 +419,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2020441172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020441166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bc39c1eec8d10f46b7164d0e784ee07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _materials:
+  - {fileID: 2100000, guid: 78af2045c4814904981d0ae5842092c3, type: 2}
+  - {fileID: 2100000, guid: 1a145255ddf26f04991aa1b717ed7d0c, type: 2}
