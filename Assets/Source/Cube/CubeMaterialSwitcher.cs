@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 namespace Cube
@@ -16,16 +17,27 @@ namespace Cube
 
         private void Start()
         {
-            _meshRenderer.materials = _materials;
-            
             SetRandomMaterial();
         }
 
         public void SetRandomMaterial()
         {
-            var materials = _meshRenderer.materials;
-            
-            (materials[0], materials[1]) = (materials[1], materials[0]);
+            Shuffle();
+
+            _meshRenderer.material =
+                _materials.FirstOrDefault(material => material.color != _meshRenderer.material.color);
+        }
+
+        private void Shuffle()
+        {
+            for (var i = 0; i < _materials.Length; i++)
+            {
+                var tempMaterial = _materials[i];
+                var randomNumber = Random.Range(i, _materials.Length);
+
+                _materials[i] = _materials[randomNumber];
+                _materials[randomNumber] = tempMaterial;
+            }
         }
     }
 }
